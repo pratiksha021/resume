@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pratiksha Shrestha">
+    <title>Pratiksha Shrestha</title>
+
+    <style>
+        /* .body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .navBar{
+            background-color: rgb(223, 255, 245);
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding: 20px;
+            height: 40px;
+       
+        }
+        .navElement{
+            display: flex;
+            justify-content: center;
+            margin-left:100px;
+            margin-top: 0px;
+        
+        }
+        .logo{
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(59, 83, 48);
+            margin-right: 200px;
+            margin-top: 0px;
+        }
+
+        .aboutSection, .projectSection{
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            padding: 20px;
+            height: auto;
+            align-items: center;
+        }
+
+        .workSection{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding: 20px;
+            height: auto;
+            align-items: center;
+        }
+
+
+        .smallSection{
+            width: 40%;
+            padding: 20px;
+        }
+
+        .bigSection{
+            width: 50%;
+            padding: 20px;
+        } */
+
+        /* ========== GLOBAL THEME COLORS ========== */
+:root {
+    --primary-green: #f04236;
+    --mint-accent: #FFFFFF;
+    --light-green-bg: #F4FFF9;
+    --secondary-green: #e3edd8;
+
+    --text-dark: #1A1A1A;
+    --text-gray: #4F4F4F;
+
+    --white: #f4f5f3;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+}
+
+/* ========== NAVBAR ========== */
+.navBar {
+    background-color: var(--mint-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 8px 6px var(--shadow);
+    border-radius: 5px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-green);
+    margin-right: 200px;
+    box-shadow: 0 8px 6px var(--shadow);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.navElement ul {
+    display: inline-block;
+    margin: 0 18px;
+    font-size: 16px;
+    color: var(--primary-green);
+    font-weight: 600;
+    cursor: pointer;
+        box-shadow: 0 8px 6px var(--shadow);
+    border-radius: 2px;
+    padding-left: 0px;
+}
+.navElement ul:hover {
+    color: var(--secondary-green);
+}
+
+/* ========== SECTIONS ========== */
+.aboutSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    border-radius: 2px;
+    box-shadow: 0 4px 10px var(--shadow);
+    background: var(--white);
+    margin-top: 0%;
+}
+
+
+
+
+.projectSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    background: var(--lightgreen-bg);
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow);
+}
+
+.workSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    background: var(--lightgreen-bg);
+    margin: 0px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow);
+
+}
+
+
+            
+.smallSection{
+    width: 40%;
+    padding: 20px;
+}
+
+.bigSection{
+    width: 50%;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3 {
+    color: var(--primary-green);
+}
+
+/* Buttons (if you add later) */
+.button {
+    background: var(--primary-green);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #2E7D32;
+}
+
+  .work-timeline {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.work-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.work-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    padding: 200px,0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.work-description {
+    display: none;
+    background: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+.footerSection{
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 8px 6px var(--shadow);
+    border-radius: 5px;
+    height: 200px;
+
+
+}
+
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <!-- <div class="logo">
+            Pratiksha
+        </div> -->
+        <div class="navElement">
+
+        <ul>About me</ul>
+        <ul>Work Experience</ul>
+        <ul>Project Experience</ul>
+        <ul>Education</ul>
+        <ul>Contact me</ul>
+        </div>
+
+
+    </div>
+    <div class="aboutSection">
+
+        <div class="bigSection">
+            <img src="name.png" alt="Pratiksha Shrestha" width="80%"">
+            
+            <p>A life long learner!
+            </p>
+        </div>
+        <div class="smallSection">
+            <img src="LETS.png" alt="Pratiksha Shrestha" width="100%" height="650vh">
+        </div>
+
+
+    
+    </div>
+
+<div class="workSection">
+<section class="section" aria-label="Work experience">
+<h2 style="text-align:center; color:#f04236;">Career</h2>
+
+<div class="work-timeline">
+
+    <div class="work-item" onclick="showExperience('cgt')">
+        <img src="cgt.png" alt="CGT">
+        <h3>Cedargate Technologies</h3>
+        <h5>Software Engineer</h5>
+    </div>
+
+    <div class="work-item" onclick="showExperience('lis')">
+        <img src="lis.png" alt="LIS Nepal">
+        
+        <h3>LIS Nepal</h3>
+        <h5>Associate Software Engineer</h5>
+    </div>
+
+    <div class="work-item" onclick="showExperience('f1')">
+        <img src="f1.png" alt="F1Soft">
+        <h3>F1Soft International</h3>
+        <h5>Software Intern</h5>
+    </div>
+
+</div>
+
+
+<!-- CGT DESCRIPTION (your exact text) -->
+<div class="work-description" id="cgt">
+    <div class="bigSection">
+        <h3>Software Engineer  
+        (Cedar Gate Technologies, Nepal | Jan 2025 – Jun 2025)</h3>
+
+        <ul>
+            <li>Developed and maintained Grails-based enterprise applications.</li>
+            <li>Delivered CGCM (Cafeteria Manager) food ordering system with ID card scan for delivery and food delivery report for management.</li>
+            <li>Built Payroll System Annual Report Module: automated salary reports emailed to employees.</li>
+            <li>Collaborated with finance and cafeteria teams for requirements and project handover.</li>
+        </ul>
+    </div>
+</div>
+
+
+
+<!-- LIS DESCRIPTION (your exact text) -->
+<div class="work-description" id="lis">
+    <div class="bigSection">
+        <h3>Associate Software Engineer  
+        (LIS Nepal | Oct 2023 – Dec 2024)</h3>
+
+        <ul>
+            <li>Developed backend Java APIs and enhanced features for retail clients.</li>
+            <li>Worked on JumpMind Commerce (JMC) projects for:</li>
+
+            <ul>
+                <li>Reitmans Canada Ltd. (RCL): feature enhancements, defect fixes, English-French translation.</li>
+                <li>The Vitamin Shoppe: defect resolution and backend improvements.</li>
+            </ul>
+
+            <li>Participated in Agile ceremonies and cross-team collaboration.</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- F1SOFT DESCRIPTION (your exact text) -->
+<div class="work-description" id="f1">
+    <div class="bigSection">
+        <h3>Quality Assurance Intern  
+        (F1Soft International | May 2023 – Aug 2023)</h3>
+
+        <ul>
+            <li>Executed functional testing and supported automation.</li>
+            <li>Identified bugs and collaborated with developers for fixes.</li>
+        </ul>
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+    <div class="projectSection">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="..." alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+        <!-- <div class="bigSection">
+            <h2>Projects – Retail Clients via JumpMind Commerce (JMC)</h2>
+
+        <ul>
+            <li><strong>Reitmans Canada Ltd. (RCL) - Offshore Developer</strong></li>
+            <ul>
+                <li>Supported and enhanced features in the JMC retail platform for RCL, a leading Canadian retail brand.</li>
+                <li>Investigated and resolved codebase defects, improving performance and stability.</li>
+                <li>Worked closely with onshore teams for requirement clarification and delivery.</li>
+                <li>Participated in Agile ceremonies including sprint planning and daily stand-ups.</li>
+                <li>Worked on language translation features, converting UI elements and messages from English to French.</li>
+                <li><strong>Tech Stack:</strong> Java, JMC, REST APIs, Spring Boot, SQL, Git, Jira</li>
+            </ul>
+
+            <li><strong>The Vitamin Shoppe – Offshore Developer</strong></li>
+            <ul>
+                <li>Analysed and fixed defects in the JMC system tailored for The Vitamin Shoppe.</li>
+                <li>Reviewed issue tickets, identified root causes, and implemented backend fixes.</li>
+                <li>Ensured timely and quality delivery of enhancements and bug fixes.</li>
+                <li>Collaborated with cross-functional teams for seamless project execution.</li>
+                <li><strong>Tech Stack:</strong> Java, JMC, REST APIs, SQL, Git, Jira</li>
+            </ul>
+
+            <li><strong>CGCM (Cedar Gate Cafeteria Manager)</strong></li>
+            <ul>
+                <li>Integrated a food ordering feature for special events via the CGCM dashboard.</li>
+                <li>Enabled food scan using employee ID cards in the cafeteria.</li>
+                <li>Generated food delivery reports used by management for canteen payment.</li>
+                <li>Collaborated with the internal cafeteria team for requirements, discussions, and handover.</li>
+                <li><strong>Tech Stack:</strong> Grails</li>
+            </ul>
+
+            <li><strong>Payroll System</strong></li>
+            <ul>
+                <li>Developed an Annual Report module to generate and email annual salary reports to employees.</li>
+                <li>Read and processed CSV files for data manipulation and report preparation.</li>
+                <li>Integrated email system for automated report distribution.</li>
+                <li>Collaborated with the internal finance team for requirements, discussions, and handover.</li>
+                <li><strong>Tech Stack:</strong> Grails</li>
+            </ul>
+        </ul>
+
+<h2>Technical Skills</h2>
+<ul>
+    <li><strong>Languages & Frameworks:</strong> Java (Spring Boot, Grails), JSP, Servlets</li>
+    <li><strong>Web & Frontend:</strong> HTML, CSS, Bootstrap</li>
+    <li><strong>Databases:</strong> MySQL, H2</li>
+    <li><strong>Tools & Platforms:</strong> IntelliJ, Eclipse, VS Code, GitHub, Jira</li>
+    <li><strong>Architecture & Principles:</strong> Microservices, RESTful APIs, Gradle, Builder Pattern, SOLID Principles</li>
+    <li><strong>Testing & Debugging:</strong> Test case writing, bug tracking, debugging tools</li>
+    <li><strong>Methodologies:</strong> Agile (Scrum), SDLC</li>
+</ul>
+
+<h2>Soft Skills</h2>
+<ul>
+    <li>Excellent communication & collaboration</li>
+    <li>Strong problem-solving and critical thinking</li>
+    <li>Quick learner and adaptable</li>
+    <li>Organized and deadline-oriented</li>
+    <li>Team player with leadership potential</li>
+</ul>
+
+        </div>
+        <div class="smallSection">
+
+        </div> -->
+
+    </div>
+
+
+
+<div class="footerSection">
+    
+    <div>
+        <p style="text-align:center; padding:20px;">&copy; 2024 Pratiksha Shrestha. All rights reserved.</p>
+    </div>
+    <div>
+        <p style="text-align:left;">Contact:0426034225</p>
+        <p style="text-align:left;">Email: shresthapratiksha2059@gmail.com</p>
+        <p style="text-align:left;">LinkedIn:<a href="//www.linkedin.com/in/pratiksha-shrestha-879b3220b/"> click here</a> </p>
+        <p style="text-align:left;">GitHub: </p>
+        <p style="text-align:left;">Portfolio: </p>
+        <p style="text-align:left;">Thank you for visiting my portfolio!</p>
+</div>
+
+
+
+
+<script>
+
+
+function showExperience(id) {
+    document.querySelectorAll('.work-description').forEach(div => {
+        div.style.display = 'none';
+    });
+
+    document.getElementById(id).style.display = 'block';
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+</script>
+</body>
+</html>
